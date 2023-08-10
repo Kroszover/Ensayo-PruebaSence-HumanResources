@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 
-/*conexion a la base de datos*/
+/* conexión a la base de datos */
 
-const sequelize = new Sequelize(
+export const sequelize = new Sequelize(
   "HumanResourcesEnsayo",
   "postgres",
   "Camiloignacio1",
@@ -12,14 +12,14 @@ const sequelize = new Sequelize(
   }
 );
 
-/*probar conexion*/
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log("Conectado a la base de datos");
-  })
-  .catch((err) => {
-    console.error("No se puede conectar a la base de datos:", err);
-  });
-
-export default sequelize;
+/* probar conexión */
+export const probarConexion = () => {
+  sequelize
+    .authenticate()
+    .then(() => {
+      console.log("Conectado a la base de datos");
+    })
+    .catch((err) => {
+      console.error("No se puede conectar a la base de datos:", err);
+    });
+};
