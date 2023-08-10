@@ -1,2 +1,2 @@
 import "dotenv/config";
-import Server from "./models/server.js";
+import Server from "../server.js";
