@@ -10,6 +10,8 @@ import {
   EmployeeDepartmentHistory,
   EmployeePayHistory,
 } from "./src/models/index.js";
+import deparmentRoutes from "./src/routes/departmentRoutes.js";
+import employeeRoutes from "./src/routes/employeeRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,6 +31,12 @@ app.get("/", (req, res) => {
   res.send("¡Hola, mundo!");
   console.log("accediendo a ruta principal (home)");
 });
+
+//departamentos
+app.use("/api/departments", deparmentRoutes);
+
+//empleados
+app.use("/api/employees", employeeRoutes);
 
 // Iniciar el servidor
 app.listen(PORT, () => {

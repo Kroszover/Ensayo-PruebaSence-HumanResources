@@ -35,6 +35,11 @@ export const EmployeeDepartmentHistory = sequelize.define(
     startdate: DataTypes.DATE,
     enddate: DataTypes.DATE,
     modifieddate: DataTypes.DATE,
+  },
+  {
+    modelName: "EmployeeDepartmentHistory",
+    tableName: "employeedepartmenthistory",
+    timestamps: false,
   }
 );
 
