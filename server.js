@@ -24,13 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, "public")));
-
-// Ruta de prueba
-app.get("/", (req, res) => {
-  res.send("¡Hola, mundo!");
-  console.log("accediendo a ruta principal (home)");
-});
+app.use(express.static("public"));
 
 //departamentos
 app.use("/api/departments", deparmentRoutes);

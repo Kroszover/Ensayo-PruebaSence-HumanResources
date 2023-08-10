@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+/*import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
 export const generateToken = (user) => {
@@ -8,6 +8,7 @@ export const generateToken = (user) => {
 };
 
 export const login = async (req, res) => {
+  console.log("Intentando realizar el inicio de sesión"); // Mensaje de depuración
   const { username, password } = req.body;
 
   try {
@@ -15,19 +16,22 @@ export const login = async (req, res) => {
     const user = {
       id: 1,
       username: "usuario",
-      password: "$2b$10$8bfjYGUmcUIgMcvu5H1se.OTGtwStB7ABESWMul8e2EKCNSoGMhWW",
+      password: "123456",
     };
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
+      console.log("Credenciales incorrectas"); // Mensaje de depuración
       return res.status(401).json({ message: "Credenciales incorrectas." });
     }
 
     const token = generateToken(user);
 
+    console.log("Inicio de sesión exitoso"); // Mensaje de depuración
     res.json({ token });
   } catch (error) {
+    console.error("Error al iniciar sesión:", error); // Mensaje de depuración
     res.status(500).json({ error: "Error al iniciar sesión." });
   }
-};
+};*/

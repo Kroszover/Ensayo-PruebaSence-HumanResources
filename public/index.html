@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Departamentos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="/assets/styles.css" rel="stylesheet">
+    <script src="/assets/main.js"></script>
+
+</head>
+
+<body>
+    <div class="container mt-4 justify-content-center">
+        <h1>Listado de Departamentos</h1>
+
+        <!-- Formulario de filtrado -->
+        <form id="filterForm" class="mt-3">
+            <div class="form-row">
+                <div class="col-md-3 mb-4">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="groupname">Nombre de Grupo</label>
+                    <input type="text" class="form-control" id="groupname" name="groupname">
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="startDate">Fecha Rango Inicio</label>
+                    <input type="text" class="form-control" id="startDate" name="startDate">
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="endDate">Fecha Rango Término</label>
+                    <input type="text" class="form-control" id="endDate" name="endDate">
+                </div>
+                <div class="col-md-12 mb-3 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Listado de departamentos -->
+        <table id="departmentsTable" class="table mt-4">
+            <thead>
+                <tr>
+                    <th>ID departamento</th>
+                    <th>Nombre</th>
+                    <th>Nombre de Grupo</th>
+                    <th>bussinessentity Id</th>
+                    <th>Fecha de Inicio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los resultados de la consulta se mostrarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
